@@ -1,0 +1,4 @@
+keras
+sklearn
+numpy
+ai-integration==1.0.6
