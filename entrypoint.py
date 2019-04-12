@@ -1,3 +1,3 @@
-from inference import initialize_model
+from predict import main
 
-initialize_model()
+main()

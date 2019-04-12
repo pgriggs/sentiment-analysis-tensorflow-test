@@ -1,6 +1,9 @@
-FROM python:2.7-slim
-WORKDIR /
-COPY . /
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
-EXPOSE 80
-CMD ["python", "entrypoint.py"]
+FROM tensorflow/tensorflow:latest-gpu
+
+WORKDIR /model
+COPY . /model
+
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
+
+ENTRYPOINT ["python", "entrypoint.py"]
